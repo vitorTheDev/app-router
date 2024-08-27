@@ -1,6 +1,5 @@
 import { AddTag } from "../../components/button/page"
-
-
+import TagItem from "./TagItem"
 
 export default async function Tags() {
   await new Promise(resolve => setTimeout(resolve, 3000))
@@ -12,7 +11,7 @@ export default async function Tags() {
 
   return <>
     <ul>
-      {data?.length && data.map(tag => <li key={tag.id}>{tag.slug}</li>)}
+      {data?.length && data.map(tag => <TagItem key={tag.id} tag={tag}></TagItem>)}
     </ul>
     <AddTag></AddTag>
   </>
