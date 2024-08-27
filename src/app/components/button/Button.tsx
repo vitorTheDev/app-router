@@ -1,5 +1,9 @@
 'use client'
 
-export default function Button({ text }: { text: string }) {
-  return <button>{text}</button>
+import { useFormStatus } from "react-dom"
+
+export default function Button({ type, children }: { children: React.ReactNode, type: HTMLButtonElement['type'] }) {
+  const { pending } = useFormStatus()
+
+  return <button disabled={pending} type={type}>{pending ? 'Carregando...' : children}</button>
 }

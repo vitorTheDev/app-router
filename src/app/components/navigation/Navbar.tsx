@@ -9,6 +9,9 @@ export default function Navbar() {
       <li>
         <Link href="/dashboard">Dashboard</Link>
       </li>
+      <li>
+        <Link href="/tags">Tags</Link>
+      </li>
     </ul>
     <ul className="flex gap-2">
       <li>
