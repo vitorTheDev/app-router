@@ -1,4 +1,4 @@
-import { AddTag } from "../add-tag/page"
+import { AddTag } from "../../components/button/page"
 
 
 
