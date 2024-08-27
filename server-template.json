@@ -1,0 +1,40 @@
+{
+  "tags": [
+    {
+      "id": 1,
+      "slug": "react"
+    },
+    {
+      "id": 2,
+      "slug": "next"
+    },
+    {
+      "id": 3,
+      "slug": "tailwindCSS"
+    },
+    {
+      "id": "c8c0",
+      "slug": "vue"
+    },
+    {
+      "id": "7955",
+      "slug": "angular"
+    },
+    {
+      "id": "e2cb",
+      "slug": "svelte"
+    },
+    {
+      "id": "2174",
+      "slug": "quik"
+    },
+    {
+      "id": "f10a",
+      "slug": "nuxt"
+    },
+    {
+      "id": "a7d1",
+      "slug": "remix"
+    }
+  ]
+}
