@@ -1,7 +1,7 @@
 import Button from "@/app/components/button/Button"
 import { revalidateTag } from "next/cache"
 
-export function AddTag() {
+export default function AddTag() {
   async function handleSubmit(form: FormData) {
     'use server'
 

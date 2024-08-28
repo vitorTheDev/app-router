@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navigation/Navbar";
 import { Suspense } from "react";
+import QueryProvider from "./components/core/query-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar></Navbar>
-        <Suspense fallback={<p>Carregando...</p>}>
-          {children}
-        </Suspense>
+        <QueryProvider>
+          <Navbar></Navbar>
+          <Suspense fallback={<p>Carregando...</p>}>
+            {children}
+          </Suspense>
+        </QueryProvider>
       </body>
     </html>
   );
