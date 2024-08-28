@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { getPokemonById, getPokemonList } from '../../[pokepage]/get-pokemon'
+import BackButton from '@/app/components/button/BackButton'
 
 export async function generateStaticParams() {
   const base = await getPokemonList({ page: '0' })
@@ -15,9 +16,10 @@ export default async function PokemonInfo({ params: { pokeid } }: { params: { po
   return (
     <div>
       <figure>
-        {data?.sprites?.front_default && <Image src={data.sprites.front_default} height={200} width={150} alt={data?.name} />}
+        {data?.sprites?.front_default && <Image src={data.sprites.front_default} height={200} width={150} alt={data.name} />}
         <h2>I&apos;m {data?.name}</h2>
       </figure>
+      <BackButton>Voltar</BackButton>
     </div>
   )
 }

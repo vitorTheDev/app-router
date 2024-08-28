@@ -1,7 +1,6 @@
 
 const getClient = async (user: string) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${user}`, {
-    cache: 'force-cache',
     next: { revalidate: 5, },
   })
   if (res.ok) {

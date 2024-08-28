@@ -4,7 +4,6 @@ import TagItem from "./TagItem"
 export default async function Tags() {
   await new Promise(resolve => setTimeout(resolve, 3000))
   const res = await fetch('http://localhost:3333/tags', {
-    cache: 'force-cache',
     next: {
       tags: ['get-tags'],
       revalidate: 5,

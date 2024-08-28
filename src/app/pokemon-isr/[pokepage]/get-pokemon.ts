@@ -13,7 +13,9 @@ export async function getPokemonList(params: PokePage) {
     }
   )
 
-  return await response.json() as Promise<PokemonListData>
+  if (response.ok) {
+    return await response.json() as Promise<PokemonListData>
+  }
 }
 
 export async function getPokemonById(id: string) {
@@ -25,5 +27,7 @@ export async function getPokemonById(id: string) {
     }
   )
 
-  return response.json() as Promise<PokemonData>
+  if (response.ok) {
+    return response.json() as Promise<PokemonData>
+  }
 }

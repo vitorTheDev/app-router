@@ -2,7 +2,6 @@ import Link from "next/link";
 
 const getClients = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/users', {
-    cache: 'force-cache',
     next: { revalidate: 5, },
   })
   if (res.ok) {
