@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link href="/tags">Tags</Link>
       </li>
       <li>
-        <Link href="/pokemon">Pokemon</Link>
+        <Link href="/pokemon-isr">Pokemon</Link>
       </li>
     </ul>
     <ul className="flex gap-2">

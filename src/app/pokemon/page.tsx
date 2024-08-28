@@ -1,19 +1,19 @@
 import { HydrationBoundary, dehydrate } from '@tanstack/react-query'
-import { pokemonOptions } from './pokemon'
+import { pokemonListOptions } from './pokemon'
 import { getQueryClient } from '../query-client'
-import { PokemonInfo } from './pokemon-info'
+import PokemonList from './PokemonList'
 
 
-export default function Pokemon() {
+export default async function Pokemon() {
   const queryClient = getQueryClient()
 
-  void queryClient.prefetchQuery(pokemonOptions)
+  queryClient.prefetchInfiniteQuery(pokemonListOptions)
 
   return (
     <main>
       <h1>Pokemon Info</h1>
       <HydrationBoundary state={dehydrate(queryClient)}>
-        <PokemonInfo />
+        <PokemonList />
       </HydrationBoundary>
     </main>
   )
